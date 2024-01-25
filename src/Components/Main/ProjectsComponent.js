@@ -10,7 +10,7 @@ const ProjectsComponent = () => {
 
   return (
     <div>
-      <b style={styles.common}> = Undur construction :( </b>
+      <b style={styles.common}> = Under construction :( </b>
     </div>
   )
 }

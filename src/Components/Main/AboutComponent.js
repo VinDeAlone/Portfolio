@@ -5,6 +5,7 @@ import Container from '@mui/material/Container'
 import { useSelector } from 'react-redux'
 import Button from '@mui/material/Button'
 import CardMedia from '@mui/material/CardMedia'
+import { BACKEND_URL } from '../../Redux/Constants'
 
 
 
@@ -36,7 +37,7 @@ const AboutComponent = () => {
       <Container maxWidth="lg">
         <Grid container spacing={0} alignContent="stretch" justifyContent="space-between">
           <Grid item xs={12} sm={5}>
-            <CardMedia title="" style={styles.cardMedia} image={id == -1 ? img : "http://localhost:8482/image/" + id} />
+            <CardMedia title="" style={styles.cardMedia} image={id == -1 ? img : BACKEND_URL + "/image/" + id} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Paper style={styles.paper}>
@@ -55,7 +56,7 @@ const AboutComponent = () => {
                   { place }
                 </span>
               </div>
-              <a href={"http://localhost:8482/resume/" + id}><Button style={{marginTop : "10px"}} variant="contained" color="primary">
+              <a href={BACKEND_URL + "/resume/" + id}><Button style={{marginTop : "10px"}} variant="contained" color="primary">
                 Resume
               </Button></a>
             </Paper>

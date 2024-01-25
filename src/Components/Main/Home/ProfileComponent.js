@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Paper from '@mui/material/Paper'
 import FileBase from 'react-file-base64'
 import {useSelector} from 'react-redux'
+import { BACKEND_URL} from '../../../Redux/Constants'
 
 const ProfileComponent = () => {
 
@@ -16,7 +17,7 @@ const ProfileComponent = () => {
 
     return (
         <>
-        <img style={styles.media} src={id == -1 ? img : "http://localhost:8482/image/" + id} alt="user" />
+        <img style={styles.media} src={id == -1 ? img : BACKEND_URL + "/image/" + id} alt="user" />
         </>
     )
 }
